@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
+    <title>chatApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+       var socket = io();
+    </script>
+    <style>
+         .header {
+            color: #ffffff;
+            background-color: #365ebf;
+         }
+         .container {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+         }
+         .messageList {
+            flex: .9;
+         }
+         .messageFormContainer {
+            flex: .1;
+         }
+         .messageForm {
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+         }
+         .messageInput {
+            flex: .9;
+         }
+         .messageButton {
+            flex: .1;
+         }
+         .messageContainer {
+           border-radius: 26%;
+           text-align: center;
+         }
+         .message {
+           width: 100%;
+         }
+         .self {
+           background-color: #d9edf7;
+           float: right;
+         }
+         .buddy {
+           background-color: #f5d9f7;
+           float: left;
+         }
+         .timeStamp {
+           font-size: 0.6em;
+           color: #dcdcdc;
+         }
+      
+    </style>
+  </head>
+  <body>
+    <div id="react-application">
+    </div>
+    <script src="./chatApp.js"></script>
+  </body>
+</html>
