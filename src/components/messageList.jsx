@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from './message.jsx';
+import styles from '../styles/styles.js';
 
 const MessageList = React.createClass({
 
@@ -38,7 +39,7 @@ const MessageList = React.createClass({
           );
       }); 
 
-      return (<div>{messageNodes}</div>);
+      return (<div className='messageList'>{messageNodes}</div>);
   }
 });
 

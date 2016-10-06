@@ -2,6 +2,7 @@ import React from 'react';
 import BuddyList from './buddyList.jsx';
 import MessageList from './messageList.jsx';
 import MessageForm from './messageForm.jsx';
+import styles from '../styles/styles.js';
 
 const ChatApp = React.createClass({
 
@@ -20,13 +21,13 @@ const ChatApp = React.createClass({
 
   render: function () {
     return (
-      <div className='container-fluid'>
-        <div className='row'>
-          <BuddyList />
-          <div className='col-xs-8'>
+      <div>
+        <h1 className='text-center header'>Simple Chat Client</h1>
+        <div>
+          <div className='container'>
               <MessageList />
-              <div className='row'>
-                  <MessageForm/>
+              <div className='messageFormContainer'>
+                  <MessageForm />
               </div>
           </div>
         </div>

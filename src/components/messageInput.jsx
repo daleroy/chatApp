@@ -13,6 +13,7 @@ const MessageInput = React.createClass({
   render: function () {
     return (
         <input
+            className='messageInput'
             type='text'
             name='message'
             autoComplete='off'

@@ -21,7 +21,7 @@ const MessageForm = React.createClass({
 
   render: function () {
     return (
-        <form onSubmit={this.handleOnSubmit}>
+        <form className='messageForm' onSubmit={this.handleOnSubmit}>
             <MessageInput ref={(ref) => this.messageInput = ref} />
             <MessageSendButton />
         </form>

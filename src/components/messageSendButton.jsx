@@ -7,7 +7,7 @@ const MessageSendButton = React.createClass({
   },
 
   render: function () {
-    return (<button type='submit'>Submit</button>);
+    return (<button className='messageButton' type='submit'>Submit</button>);
   }
 });
 

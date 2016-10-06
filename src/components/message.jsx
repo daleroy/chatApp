@@ -7,10 +7,11 @@ const Message = React.createClass({
   },
 
   render: function () {
+      const containerClass = this.props.isSelf ? 'messageContainer self' : 'messageContainer buddy';
       return (
-          <div className='row'>
-              <div>{this.props.message}</div>
-              <div>{this.props.timeStamp}</div>
+          <div className={containerClass}>
+              <div className='message'>{this.props.message}</div>
+              <div className='timeStamp'>{this.props.timeStamp}</div>
           </div>
       );
   }
