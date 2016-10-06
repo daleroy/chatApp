@@ -1,4 +1,7 @@
 import React from 'react';
+import BuddyList from './buddyList.jsx';
+import MessageList from './messageList.jsx';
+import MessageForm from './messageForm.jsx';
 
 const ChatApp = React.createClass({
 
@@ -9,21 +12,15 @@ const ChatApp = React.createClass({
   render: function () {
     return (
       <div className='container-fluid'>
-
         <div className='row'>
-          <div className='col-xs-4'>Buddy List</div>
+          <BuddyList />
           <div className='col-xs-8'>
+              <MessageList />
               <div className='row'>
-                  <div className='col-xs-4'>Buddy Message</div>
-                  <div className='col-xs-4'>My Message</div>
-              </div>
-              <div className='row'>
-                  <div className='col-xs-6'>Text Input</div>
-                  <div className='col-xs-2'>Button</div>
+                  <MessageForm />
               </div>
           </div>
         </div>
-
       </div>
     );
   }
