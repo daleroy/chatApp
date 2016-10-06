@@ -9,6 +9,15 @@ const ChatApp = React.createClass({
     return {};
   },
 
+  componentDidMount: function() {
+    const _this = this;
+
+    window.socket.on('client id', function(clientId) {
+      window.chatApp = {clientId};
+      console.log(`clientId: ${clientId}`);
+    });
+  },
+
   render: function () {
     return (
       <div className='container-fluid'>
@@ -17,7 +26,7 @@ const ChatApp = React.createClass({
           <div className='col-xs-8'>
               <MessageList />
               <div className='row'>
-                  <MessageForm />
+                  <MessageForm/>
               </div>
           </div>
         </div>
