@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log(`${socket.id} connected`);
   clients[socket.id] = {id: socket.id};
 
   // Send the socket.id back to the client so they know when a message is coming from themself.
@@ -27,12 +26,10 @@ io.on('connection', (socket) => {
         message: msg,
         timeStamp: Date.now()
     }
-    console.log(`sender: ${message.sender} message: ${message.message} timeStamp: ${message.timeStamp}`);
     io.emit('chat message', message);
   });
 
   socket.on('disconnect', () => {
-    console.log(`${socket.id} disconnected`);
     clients[socket.id] = null;
   });
 });
